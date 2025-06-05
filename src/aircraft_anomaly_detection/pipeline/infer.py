@@ -52,7 +52,7 @@ def infer(
     input = Path(input)
     output_dir = Path(output)
 
-    image_paths = [path for path in input.iterdir() if path.suffix in (".png", ".jpg")]
+    image_paths = [path for path in input.iterdir().lower() if path.suffix in (".png", ".jpg")]
 
     pred_annotation_list = []
     images_metadata = []
